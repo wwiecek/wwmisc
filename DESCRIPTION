@@ -1,0 +1,12 @@
+Package: wwmisc
+Type: Package
+Title: minimal function templates for WW projects
+Version: 0.1.0
+Author: Witold Wiecek
+Maintainer: Witold Wiecek <witold.wiecek@gmail.com>
+Description: This contains mostly one-liner functions such as
+    logit, mean and interval, display as percent etc.
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+License: GPL-3
