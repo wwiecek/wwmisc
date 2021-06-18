@@ -80,3 +80,27 @@ logit <- function(x) log(x/(1-x))
 #' @return
 #' @export
 inv_logit <- function(x) {exp(x)/(1+exp(x))}
+
+
+#' Check if a vector is monotonic
+#'
+#' @param x numerical vector
+#' @param type matched to `"growing"` or `"decreasing"`
+#' @return TRUE/FALSE
+#' @export
+is.monotonic <- function(x, type = "growing") {
+  if(!is.numeric(x))
+    stop("Checking monotonicity of a non-numeric vector")
+  if(length(x) == 1)
+    return(TRUE)
+  type <- match.arg(type, choices = c("growing", "decreasing"))
+  if(type == "growing")
+    for(i in 2:length(x))
+      if(x[i] <= x[i-1])
+        return(FALSE)
+  if(type == "decreasing")
+    for(i in 2:length(x))
+      if(x[i] >= x[i-1])
+        return(FALSE)
+  return(TRUE)
+}
