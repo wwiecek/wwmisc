@@ -104,3 +104,10 @@ is.monotonic <- function(x, type = "growing") {
         return(FALSE)
   return(TRUE)
 }
+
+
+#' Return .Last.value
+#' @export
+lv <- function() {
+  .Last.value
+}

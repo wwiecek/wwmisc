@@ -1,7 +1,7 @@
 Package: wwmisc
 Type: Package
 Title: minimal function templates for WW projects
-Version: 0.1.0
+Version: 0.1.2
 Author: Witold Wiecek
 Maintainer: Witold Wiecek <witold.wiecek@gmail.com>
 Description: This contains mostly one-liner functions such as
