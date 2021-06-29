@@ -104,3 +104,47 @@ is.monotonic <- function(x, type = "growing") {
         return(FALSE)
   return(TRUE)
 }
+
+
+#' Return proportion of the observations that are less or greater than some value
+#' @return A numeric between 0 and 1
+#' @export
+gt <- function(x, y) {
+  (x > y)/length(x)
+}
+#' @export
+#' @describeIn gt Proportion of `x` greater or equal to `y`
+gte <- function(x, y) {
+  (x >= y)/length(x)
+}
+#' @export
+#' @describeIn gt Proportion of `x` < `y`
+lt <- function(x, y) {
+  (x < y)/length(x)
+}
+#' @export
+#' @describeIn gt Proportion of `x` <= `y`
+lte <- function(x, y) {
+  (x <= y)/length(x)
+}
+
+#' @export
+#' @describeIn gt Proportion of `x` > 0
+gt0 <- function(x) {
+  gt(x, 0)
+}
+#' @export
+#' @describeIn gt Proportion of `x` >= 0
+gte0 <- function(x) {
+  gte(x, 0)
+}
+#' @export
+#' @describeIn gt Proportion of `x` < 0
+lt0 <- function(x) {
+  lt(x, 0)
+}
+#' @export
+#' @describeIn gt Proportion of `x` <= 0
+lte0 <- function(x) {
+  lte(x, 0)
+}
