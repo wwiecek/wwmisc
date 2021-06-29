@@ -110,22 +110,22 @@ is.monotonic <- function(x, type = "growing") {
 #' @return A numeric between 0 and 1
 #' @export
 gt <- function(x, y) {
-  (x > y)/length(x)
+  sum(x > y)/length(x)
 }
 #' @export
 #' @describeIn gt Proportion of `x` greater or equal to `y`
 gte <- function(x, y) {
-  (x >= y)/length(x)
+  sum(x >= y)/length(x)
 }
 #' @export
 #' @describeIn gt Proportion of `x` < `y`
 lt <- function(x, y) {
-  (x < y)/length(x)
+  sum(x < y)/length(x)
 }
 #' @export
 #' @describeIn gt Proportion of `x` <= `y`
 lte <- function(x, y) {
-  (x <= y)/length(x)
+  sum(x <= y)/length(x)
 }
 
 #' @export
