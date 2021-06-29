@@ -148,3 +148,10 @@ lt0 <- function(x) {
 lte0 <- function(x) {
   lte(x, 0)
 }
+
+
+#' Return .Last.value
+#' @export
+lv <- function() {
+  .Last.value
+}
