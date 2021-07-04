@@ -162,7 +162,7 @@ lv <- function() {
 #' @param x vector to standardise (x - mean)/sd
 #' @param skip_binom if there are only 2 unique values, should they be skipped?
 #' @return a standardised vector
-#'
+#' @export
 st <- function(x, skip_binom = FALSE){
   if(skip_binom && (length(unique(x)) == 2)) return(x)
   (x - mean(x))/sd(x)
