@@ -167,3 +167,29 @@ st <- function(x, skip_binom = FALSE){
   if(skip_binom && (length(unique(x)) == 2)) return(x)
   (x - mean(x))/sd(x)
 }
+
+
+#' Calculate log risk ratio
+#' @param a events in group 1
+#' @param b non-events in group 1
+#' @param c events in group 2
+#' @param d non-events in group 2
+rr <- function(a,b,c,d) {
+  c(
+    log((a/(a+b))/(c/(c+d))),
+    sqrt(1/a + 1/c - 1/(a+b) - 1/(c+d))
+  )
+}
+
+#' Calculate log odds ratio
+#'
+#' @param a events in group 1
+#' @param b non-events in group 1
+#' @param c events in group 2
+#' @param d non-events in group 2
+or <- function(a,b,c,d) {
+  c(
+  log((a*d)/(b*c)),
+  sqrt(1/a + 1/b + 1/c + 1/d)
+  )
+}
